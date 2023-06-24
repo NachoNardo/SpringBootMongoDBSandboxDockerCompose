@@ -1,5 +1,5 @@
-# docker-compose-mongodb
-Simple MongoDB docker-compose tudo use with the MongoDB Sandbox project.
+# Spring Boot MongoDB Sandbox Docker Compose
+Simple MongoDB docker-compose tudo use with the [MongoDB Sandbox project](https://github.com/NachoNardo/SpringBootMongoDBSandbox).
 
 To run the composer you need to install docker verion 3.7 or higher.
 
