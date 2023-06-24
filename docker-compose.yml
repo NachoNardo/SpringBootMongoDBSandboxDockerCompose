@@ -1,18 +1,15 @@
 version: '3.7'
+
 services:
-  java-api:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    ports:
-      - "8081:8081"
-    container_name: mongosandbox
-    links:
-      - mongo-db
-  mongo-db:
-    image: mongo
+  mongodb:
+    image: mongo:6.0.6
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: admin
     ports:
       - "27017:27017"
-    container_name: mongo-db
     volumes:
-      - ./db/:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
