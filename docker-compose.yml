@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8081:8081"
-    container_name: java-api
+    container_name: mongosandbox
     links:
       - mongo-db
   mongo-db:
